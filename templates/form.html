@@ -1,0 +1,17 @@
+<!-- default 상속받기 -->
+{% extends 'default.html' %}
+
+<!-- 타이틀 -->
+{% block title %}Form 페이지입니다..{% endblock %}
+
+<!-- 폼태그 -->
+{% block content %}
+<form action="/form", method="post", enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label for="formFile" class="form-label">28 x 28 사진을 입력하세요.</label>
+        <input class="form-control" type="file" name='mnist_input' id="formFile">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
